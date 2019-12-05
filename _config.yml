@@ -1,0 +1,12 @@
+# SITE CONFIGURATION
+baseurl: "/Reveal-Jekyll"
+#url: "https://sylhare.github.io"
+favicon: assets/favicon.ico                             # Icon displayed in the tab
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea"]

@@ -1,0 +1,38 @@
+<head>
+    <meta charset="utf-8">
+    <title>reveal.js – The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'feed.xml' | absolute_url }}"/>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="{{ 'assets/lib/css/monokai.css' | relative_url }}">
+
+    <!-- Reveal CSS -->
+    <link rel="stylesheet" href="{{ 'assets/css/reset.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/reveal.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/theme/black.css' | relative_url }}" id="theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? "{{ 'assets/css/print/pdf.css' | relative_url }}" : "{{ 'assets/css/print/paper.css' | relative_url }}";
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+</head>
