@@ -7,15 +7,24 @@
         </p>
     </section>
 
-    <!--<section data-markdown="presentation.md"
-             data-separator="^---"
-             data-separator-vertical="^___"
-             data-charset="utf-8"
-             data-notes="^Note:">
-        <script type="text/template">
-            ## Page title
+    <section>
+        <h1>Markdown</h1>
+    {% for item in site.slides %}
+        {% include section.html url=item.url %}
+    {% endfor %}
 
-            A paragraph with some text and a [link](http://hakim.se).
-        </script>
-    </section> -->
+
+        {% for collection in site.collections %}
+        {% assign name = collection.label %}
+        <section>
+            <h1>{{ name }}</h1>
+            {% for page in site.[name] %}
+            <article>
+                <h2>{{ page.title }}</h2>
+                <p>{{ page.content | markdownify }}</p>
+            </article>
+            {% endfor %}
+        </section>
+        {% endfor %}
+    </section>
 </div>
