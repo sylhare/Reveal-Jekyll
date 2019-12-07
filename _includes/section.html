@@ -1,9 +1,12 @@
-<section data-markdown="{{ include.url }}"
+<!--<section data-markdown="{{ include.page.url | relative_url }}"
          data-separator="^---"
          data-separator-vertical="^___"
          data-charset="utf-8"
          data-notes="^Note:">
     <script type="text/template">
-        {{ include.slide }}
     </script>
+</section> -->
+
+<section>
+        {{ include.page.content }}
 </section>

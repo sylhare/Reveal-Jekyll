@@ -1,30 +1,8 @@
 <div class="slides">
-    <section>
-        <h1>Reveal.js</h1>
-        <h3>The HTML Presentation Framework</h3>
-        <p>
-            <small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-        </p>
-    </section>
 
-    <section>
-        <h1>Markdown</h1>
-    {% for item in site.slides %}
-        {% include section.html url=item.url %}
+    {% for page in site.slides %}
+        {% include section.html page=page %}
     {% endfor %}
 
 
-        {% for collection in site.collections %}
-        {% assign name = collection.label %}
-        <section>
-            <h1>{{ name }}</h1>
-            {% for page in site.[name] %}
-            <article>
-                <h2>{{ page.title }}</h2>
-                <p>{{ page.content | markdownify }}</p>
-            </article>
-            {% endfor %}
-        </section>
-        {% endfor %}
-    </section>
 </div>
