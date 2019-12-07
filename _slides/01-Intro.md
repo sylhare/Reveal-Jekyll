@@ -1,6 +1,4 @@
 ---
-layout: presentation
-title: Demo
 ---
 # Demo 
 
