@@ -15,7 +15,6 @@
     dependencies: [
       { src: "{{ 'assets/plugin/markdown/marked.js' | relative_url }}", condition: function() { return !!document.querySelector( "[data-markdown]" ); } },
       { src: "{{ 'assets/plugin/markdown/markdown.js' | relative_url }}", condition: function() { return !!document.querySelector( "[data-markdown]" ); } },
-      { src: "{{ 'assets/plugin/highlight/highlight.js' | relative_url }}", async: true },
       { src: "{{ 'assets/plugin/search/search.js' | relative_url }}", async: true },
       { src: "{{ 'assets/plugin/zoom-js/zoom.js' | relative_url }}", async: true },
       { src: "{{ 'assets/plugin/notes/notes.js' | relative_url }}", async: true }
