@@ -1,31 +1,18 @@
----
-layout: raw
----
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+<div class="reveal">
+    <div class="slides">
 
-<!-- Use presentation as layout to use this file as the presentation -->
-# First Slide
+        {% for page in site.slides %}
+            <section> {{ page.content }}</section>
+        {% endfor %}
 
-stuff
+    </div>
+</div>
+{% include reveal.html %}
+</body>
+</html>
 
-___  <!-- "___" Makes a basement slide -->
-
-# Basement 1
-
-Hey, you can still go down
-
-```
-test
-```
-
-___
-
-# Basement 2
-
-You're rock bottom!
-
---- <!-- "---" Makes the next slide -->
-
-# Second slide
-
-stuff
 

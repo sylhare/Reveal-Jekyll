@@ -1,18 +1,13 @@
 ---
 ---
 
-<section>
 ## Getting started
 
 Run the presentation using:
 
 ```bash
+# With Bundle
 bundle exec jekyll serve
 ```
-</section>
-
-<section>
 
 This is a basement slide under this slide
-
-</section>
