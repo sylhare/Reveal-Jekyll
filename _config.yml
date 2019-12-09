@@ -8,6 +8,9 @@ collections:
   slides:
     output: true
     permalink: /:collection/:name
+  basements:
+    output: true
+    permalink: /:collection/:name
 
 # BUILD SETTINGS
 markdown: kramdown

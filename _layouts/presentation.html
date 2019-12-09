@@ -5,8 +5,20 @@
 <div class="reveal">
     <div class="slides">
 
-        {% for page in site.slides %}
-            <section> {{ page.content }}</section>
+        {% for slide in site.slides %}
+            <section>
+                <section>
+                {{ slide.content }}
+                </section>
+
+                {% for basement in site.basements %}
+                    {% if slide.url contains basement.slide %}
+                    <section>
+                        {{ basement.content }}
+                    </section>
+                    {% endif %}
+                {% endfor %}
+            </section>
         {% endfor %}
 
     </div>
