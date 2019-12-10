@@ -6,7 +6,9 @@
     <div class="slides">
 
         {% for slide in site.slides %}
-        <section {% if slide.transition %} data-transition="{{ slide.transition }}" {% endif %}>
+        <section {% if slide.transition %} data-transition="{{ slide.transition }}" {% endif %}
+                 {% if slide.background %} data-background="{{ slide.background }}" {% endif %}
+                 {% if slide.video %} data-background-video="{{ slide.video }}" data-background-color="#000000" {% endif %}>
             <section>
                 {{ slide.content }}
             </section>

@@ -1,6 +1,6 @@
 ---
 layout: presentation
-title: Example
+background: "https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" 
 ---
 
 
@@ -8,6 +8,4 @@ title: Example
 
 Here is an example of a standalone slide.
 
-```bash
-docker exec -ti test
-```
+Use `background` attibute to add a background image.
