@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% for basement in site.basements %}
+    {% if include.name contains basement.slide %}
+    <section>
+        {{ basement.content }}
+    </section>
+    {% endif %}
+{% endfor %}

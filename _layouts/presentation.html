@@ -8,18 +8,11 @@
         {% for slide in site.slides %}
         <section {% if slide.transition %} data-transition="{{ slide.transition }}" {% endif %}>
             <section>
-                <section>
                 {{ slide.content }}
-                </section>
-
-                {% for basement in site.basements %}
-                    {% if slide.url contains basement.slide %}
-                    <section>
-                        {{ basement.content }}
-                    </section>
-                    {% endif %}
-                {% endfor %}
             </section>
+
+            {% include basements.html name=slide.url %}
+        </section>
         {% endfor %}
 
     </div>
