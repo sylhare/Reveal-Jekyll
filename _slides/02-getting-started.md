@@ -1,4 +1,5 @@
 ---
+transition: zoom
 ---
 
 ## Getting started

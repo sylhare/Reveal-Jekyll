@@ -10,16 +10,21 @@ Run the presentation using:
 bundle exec jekyll serve
 ```
 
-## Create your presentation
+## Source
 
-### Raw Markdown
+- Assets contains [Reveal.js](https://github.com/hakimel/reveal.js/)
+
+
+# Create your presentation
+
+## Raw Markdown
 
 In `index.html` use the `layout: raw` and then you can create your slides directly in the file using markdown:
 
  - `___` Makes a basement slide
  - `---` Makes the next slide
 
-### Using Jekyll capabilities
+## Using Jekyll capabilities
 
 In `index.html` use the `layout: presentation`. It will use the `_slides` and `_basements` folder to create the presentation.
  
@@ -58,7 +63,15 @@ Content of the Basement slide in markdown
 
 > Don't forget to use the `slide` attribute to specify under which slide it will fit.
 
+### Transition
 
-## Source
+Either use the `transition` attribute in the page:
 
-- Assets contains [Reveal.js](https://github.com/hakimel/reveal.js/)
+```yaml
+
+---
+transition: zoom
+---
+
+```
+Or set it globally using `reveal.transition` in `_config.yml`.

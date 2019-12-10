@@ -3,6 +3,9 @@ baseurl: "/Reveal-Jekyll"
 #url: "https://sylhare.github.io"
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
+reveal:
+  transition: "slide" # none/fade/slide/convex/concave/zoom
+
 # Slides
 collections:
   slides:

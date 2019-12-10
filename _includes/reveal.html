@@ -9,7 +9,7 @@
     center: true,
     hash: true,
 
-    transition: "slide", // none/fade/slide/convex/concave/zoom
+    transition: '{{ site.reveal.transition | default: "slide" }}',
 
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [

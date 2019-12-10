@@ -6,6 +6,7 @@
     <div class="slides">
 
         {% for slide in site.slides %}
+        <section {% if slide.transition %} data-transition="{{ slide.transition }}" {% endif %}>
             <section>
                 <section>
                 {{ slide.content }}
