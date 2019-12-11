@@ -10,11 +10,6 @@ Run the presentation using:
 bundle exec jekyll serve
 ```
 
-## Source
-
-- Assets contains [Reveal.js](https://github.com/hakimel/reveal.js/)
-
-
 # Create your presentation
 
 ## Raw Markdown
@@ -77,3 +72,23 @@ reveal:
 ```
 
 You can set globally the transitions and theme of your presentation.
+
+# License
+
+## Reveal Jekyll
+
+[Reveal Jekyll](https://github.com/sylhare/Reveal-Jekyll/blob/master/LICENSE) MIT licensed
+
+Copyright (c) 2019 Sylhare \o/
+
+## Reveal.js
+
+[Reveal.js](https://github.com/hakimel/reveal.js/) MIT licensed
+
+Copyright (C) 2019 Hakim El Hattab, http://hakim.se
+
+## Jekyll
+
+[Jekyll](https://github.com/jekyll/jekyll) MIT licensed
+
+Copyright (c) 2008-present Tom Preston-Werner and Jekyll contributors
