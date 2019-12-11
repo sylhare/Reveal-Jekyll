@@ -11,4 +11,4 @@ Run the presentation using:
 bundle exec jekyll serve
 ```
 
-This is a basement slide under this slide
+Check the basement slides by clicking the down arrow.

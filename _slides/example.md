@@ -8,4 +8,4 @@ background: "https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.p
 
 Here is an example of a standalone slide.
 
-Use `background` attibute to add a background image.
+Use `background` attribute to add a background image.
