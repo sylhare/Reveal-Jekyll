@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.metadata["plugin_type"] = "theme"
 
   spec.files                   = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(assets/(js|css|fonts)/|_(includes|layouts)/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
+    f.match(%r!^(assets/(js|css|lib|plugin)/|_(includes|layouts)/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
   end
 
   spec.required_ruby_version   = '>= 2.4.0'
