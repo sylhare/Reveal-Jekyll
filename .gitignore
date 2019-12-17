@@ -30,3 +30,5 @@ jekyll-theme-type-on-strap.gemspec
 *copy.md
 .jekyll-cache/*
 test/*
+docker-gem/*
+reveal-jekyll-*/*

@@ -73,6 +73,18 @@ reveal:
 
 You can set globally the transitions and theme of your presentation.
 
+## Use as a gem
+
+There is a `Dockerfile` available, check it out to see how to use the theme in a Docker.
+Basically you need 4 things to make it work as a gem:
+
+- The Gemfile with the [reveal-jekyll gem](https://rubygems.org/gems/reveal-jekyll): `gem 'reveal-jekyll', '~> 0.0.2'`
+- The `index.html` which is the entrypoint of your jekyll site and presentation (with explained above configuration)
+- The `_config.yml` which defines your theme configuration.
+- The presentation, assets and content you want to display.
+
+And that's it you'd be good to roll!
+
 # License
 
 ## Reveal Jekyll
