@@ -4,26 +4,33 @@ Reveal.js Web presentation served with jekyll.
 
 ## Set up
 
+Make sure to install bundle which will ease the installation of jekyll:
+
+```bash
+gem install bundle
+bundle install
+```
+
 Run the presentation using:
 
 ```bash
 bundle exec jekyll serve
 ```
 
-# Create your presentation
+## Create your presentation
 
-## Raw Markdown
+### Raw Markdown
 
 In `index.html` use the `layout: raw` and then you can create your slides directly in the file using markdown:
 
  - `___` Makes a basement slide
  - `---` Makes the next slide
 
-## Using Jekyll capabilities
+### Using Jekyll capabilities
 
 In `index.html` use the `layout: presentation`. It will use the `_slides` and `_basements` folder to create the presentation.
  
-### Slide
+#### Slide
 
 Use the `_slides` folder to create a file per slide in markdown. 
 
@@ -42,7 +49,7 @@ Slide content in markdown
 
 To order the presentation you can do something like `01-First-slide-title.md`, `02-Second-slide-title.md`.
 
-### Basement slides
+#### Basement slides
 
 Basement slides can be put in the `_basements` folder.
 The Basement slides are slides that will be accessible using the down arrow when on a particular slide.
@@ -61,7 +68,7 @@ Content of the Basement slide in markdown
 
 > Don't forget to use the `slide` attribute to specify under which slide it will fit.
 
-### Config
+#### Config
 
 Configure Reveal.js in teh `_config.yml`:
 
@@ -73,7 +80,7 @@ reveal:
 
 You can set globally the transitions and theme of your presentation.
 
-## Use as a gem
+### Use as a gem
 
 There is a `Dockerfile` available, check it out to see how to use the theme in a Docker.
 Basically you need 4 things to make it work as a gem:
@@ -85,21 +92,21 @@ Basically you need 4 things to make it work as a gem:
 
 And that's it you'd be good to roll!
 
-# License
+## License
 
-## Reveal Jekyll
+### Reveal Jekyll
 
 [Reveal Jekyll](https://github.com/sylhare/Reveal-Jekyll/blob/master/LICENSE) MIT licensed
 
 Copyright (c) 2019 Sylhare \o/
 
-## Reveal.js
+### Reveal.js
 
 [Reveal.js](https://github.com/hakimel/reveal.js/) MIT licensed
 
 Copyright (C) 2019 Hakim El Hattab, http://hakim.se
 
-## Jekyll
+### Jekyll
 
 [Jekyll](https://github.com/jekyll/jekyll) MIT licensed
 
