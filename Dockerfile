@@ -1,4 +1,4 @@
-FROM docker.io/sylhare/jekyll:latest
+FROM sylhare/jekyll:latest
 
 WORKDIR /app
 COPY . /app
@@ -22,4 +22,5 @@ RUN bundle install
 
 EXPOSE 4000
 
+# docker run -p 4000:4000 <image_name>
 CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]

@@ -19,6 +19,7 @@ after_script:
   - gem install type-on-strap
   - gem install reveal-jekyll
   - gem install jekyll-theme-type-on-strap
+  - docker build . -t reveal-jekyll
 
 branches:
   only:
