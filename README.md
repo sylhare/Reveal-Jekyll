@@ -83,6 +83,17 @@ reveal:
 
 You can set globally the transitions and theme of your presentation.
 
+### Export presentation
+
+To export the presentation use `?print-pdf` at the end of the url to be able to save the page as PDF:
+
+```
+<url>:<port>/<base url>/?print-pdf
+```
+
+Try it at https://sylhare.github.io/Reveal-Jekyll/?print-pdf
+
+
 ### Use as a gem
 
 There is a `Dockerfile` available, check it out to see how to use the theme in a Docker.
