@@ -3,6 +3,7 @@ baseurl: "/Reveal-Jekyll"
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 reveal:
+  title: "Reveal-jekyll"
   transition: "slide" # none/fade/slide/convex/concave/zoom
   theme: "black" # beige/blood/league/moon/night/serif/simple/sky/solarized/white
   number: true
