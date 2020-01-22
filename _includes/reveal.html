@@ -22,4 +22,6 @@
     ]
   });
 
+  {% if site.reveal.number %} Reveal.configure({ slideNumber: "{{ site.reveal.numberType }}" }); {% endif %}
+
 </script>
