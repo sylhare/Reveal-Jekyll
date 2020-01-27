@@ -18,7 +18,7 @@ RUN echo "Creating a basic index.html" && cat /app/index.html
 # Create Gemfile
 RUN echo "Adding the Gemfile"
 RUN echo "source \"https://rubygems.org\"" >> /app/Gemfile
-RUN echo "gem 'reveal-jekyll', '~> 0.0.2'" >> /app/Gemfile
+RUN echo "gem 'reveal-jekyll', '~> 0.0.4'" >> /app/Gemfile
 # ---
 
 # Install dependencies
