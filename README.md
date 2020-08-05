@@ -1,9 +1,10 @@
-# Reveal Jekyll
-
+# Reveal Jekyll 
 [![Build Status](https://travis-ci.org/sylhare/Reveal-Jekyll.svg?branch=master)](https://travis-ci.org/sylhare/Reveal-Jekyll)
 [![Gem Version](https://badge.fury.io/rb/reveal-jekyll.svg)](https://badge.fury.io/rb/reveal-jekyll)
 
 Reveal.js Web presentation served with jekyll.
+If you have any request, problems please open an [issue](https://github.com/sylhare/Reveal-Jekyll/issues). 
+Feel free to implement any change and open through pull requests. 😉
 
 ## Set up
 
@@ -107,18 +108,17 @@ Basically you need 4 things to make it work as a gem:
 And that's it you'd be good to roll!
 
 ## License
-
 ### Reveal Jekyll
 
 [Reveal Jekyll](https://github.com/sylhare/Reveal-Jekyll/blob/master/LICENSE) MIT licensed
 
-Copyright (c) 2019 Sylhare \o/
+Copyright (c) 2019-present Sylhare \o/
 
 ### Reveal.js
 
 [Reveal.js](https://github.com/hakimel/reveal.js/) MIT licensed
 
-Copyright (C) 2019 Hakim El Hattab, http://hakim.se
+Copyright (C) 2011-present Hakim El Hattab, http://hakim.se
 
 ### Jekyll
 
