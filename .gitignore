@@ -32,3 +32,4 @@ jekyll-theme-type-on-strap.gemspec
 test/*
 docker-gem/*
 reveal-jekyll-*/*
+*.pptx

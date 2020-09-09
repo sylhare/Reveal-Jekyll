@@ -1,4 +1,5 @@
-# Reveal Jekyll 
+![Reveal Jekyll](./reveal-jekyll.png)
+
 [![Build Status](https://travis-ci.org/sylhare/Reveal-Jekyll.svg?branch=master)](https://travis-ci.org/sylhare/Reveal-Jekyll)
 [![Gem Version](https://badge.fury.io/rb/reveal-jekyll.svg)](https://badge.fury.io/rb/reveal-jekyll)
 
