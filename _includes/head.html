@@ -18,22 +18,13 @@
     <!-- RSS -->
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'feed.xml' | absolute_url }}"/>
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="{{ 'assets/lib/css/monokai.css' | relative_url }}">
+    <!-- Theme used for reveal.js and default syntax highlighting of code -->
+    <link rel="stylesheet" href="{{ 'assets/plugin/highlight/monokai.css' | relative_url }}">
     <link rel="stylesheet" href="{{ 'assets/css/rouge-highlight/monokai.css' | relative_url }}">
 
     <!-- Reveal CSS -->
-    <link rel="stylesheet" href="{{ 'assets/css/reset.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ 'assets/css/reveal.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ 'assets/css/theme/' | relative_url }}{{ site.reveal.theme }}.css" id="theme">
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match(/print-pdf/gi) ? "{{ 'assets/css/print/pdf.css' | relative_url }}" : "{{ 'assets/css/print/paper.css' | relative_url }}";
-      document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
+    <link rel="stylesheet" href="{{ 'assets/dist/reset.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/dist/reveal.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/dist/theme/' | relative_url }}{{ site.reveal.theme }}.css" id="theme">
 
 </head>
