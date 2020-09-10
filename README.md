@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/sylhare/Reveal-Jekyll.svg?branch=master)](https://travis-ci.org/sylhare/Reveal-Jekyll)
 [![Gem Version](https://badge.fury.io/rb/reveal-jekyll.svg)](https://badge.fury.io/rb/reveal-jekyll)
 
-Reveal.js Web presentation served with jekyll.
+[Reveal.js](https://github.com/hakimel/reveal.js) Web presentation served with jekyll.
+Find all the reveal.js [documentation](https://revealjs.com/) the default plugins are already package in reveal jekyll.
 If you have any request, problems please open an [issue](https://github.com/sylhare/Reveal-Jekyll/issues). 
 Feel free to implement any change and open through pull requests. 😉
 
