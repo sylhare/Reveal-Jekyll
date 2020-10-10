@@ -17,7 +17,7 @@ gem install bundle
 bundle install
 ```
 
-Run the presentation using:
+Run the presentation ()it zill be one [localhost:4000](localhost:4000) using
 
 ```bash
 bundle exec jekyll serve
@@ -30,8 +30,8 @@ bundle exec jekyll serve
 Take a look at the [example](https://github.com/sylhare/Reveal-Jekyll/blob/master/index.html),
 In `index.html` use the `layout: raw` and then you can create your slides directly in the file using markdown:
 
- - `___` Makes a basement slide
- - `---` Makes the next slide
+ - `___`: Makes a basement slide
+ - `---`: Makes the next slide
 
 ### Using Jekyll capabilities
 
@@ -104,7 +104,7 @@ Try it at [.../Reveal-Jekyll/?print-pdf](https://sylhare.github.io/Reveal-Jekyll
 There is a `Dockerfile` available, check it out to see how to use the theme in a Docker.
 Basically you need 4 things to make it work as a gem:
 
-- The Gemfile with the [reveal-jekyll gem](https://rubygems.org/gems/reveal-jekyll): `gem 'reveal-jekyll', '~> 0.0.2'`
+- The Gemfile with the [reveal-jekyll gem](https://rubygems.org/gems/reveal-jekyll): `gem 'reveal-jekyll'` (specify the version with , `'~> 0.0.2'`)
 - The `index.html` which is the entrypoint of your jekyll site and presentation (with explained above configuration)
 - The `_config.yml` which defines your theme configuration.
 - The presentation, assets and content you want to display.
