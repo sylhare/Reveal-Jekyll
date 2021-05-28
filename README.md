@@ -28,10 +28,28 @@ bundle exec jekyll serve
 ### Raw Markdown
 
 Take a look at the [example](https://github.com/sylhare/Reveal-Jekyll/blob/master/index.html),
-In `index.html` use the `layout: raw` and then you can create your slides directly in the file using markdown:
+In [`index.html`](https://github.com/sylhare/Reveal-Jekyll/blob/master/index.html) use the `layout: raw` and then you can create your slides directly in the file using markdown:
 
  - `___`: Makes a basement slide
  - `---`: Makes the next slide
+
+#### One file slides example
+
+Your index.html could look like:
+
+```
+---
+layout: raw
+---
+
+## First slide
+---
+## Second slide
+___
+Second slide's basement
+---
+## Third slide
+```
 
 ### Using Jekyll capabilities
 
@@ -60,7 +78,8 @@ To order the presentation you can do something like `01-First-slide-title.md`, `
 #### Basement slides
 
 Basement slides can be put in the `_basements` folder.
-The Basement slides are slides that will be accessible using the down arrow when on a particular slide.
+
+The Basement slides will be accessible using the down arrow when on a particular slide. They are connected by the `slide` attribute which is the filename of the slide.
 
 They are the sub sections of your presentation:
 
@@ -74,7 +93,10 @@ Content of the Basement slide in markdown
 
 ```
 
-> Don't forget to use the `slide` attribute to specify under which slide it will fit.
+e.g:
+
+- For a slide called `02-slide.md`
+- The basement of that slide `02-1-basement.md` should have the attribute `slide: 02-slide`
 
 #### Config
 
