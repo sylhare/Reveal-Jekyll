@@ -27,8 +27,8 @@ bundle exec jekyll serve
 
 ### Raw Markdown
 
-Take a look at the [example](https://github.com/sylhare/Reveal-Jekyll/blob/master/index.html),
-In [`index.html`](https://github.com/sylhare/Reveal-Jekyll/blob/master/index.html) use the `layout: raw` and then you can create your slides directly in the file using markdown:
+Take a look at the [example](https://github.com/sylhare/Reveal-Jekyll/blob/raw/index.html),
+In [`index.html`](https://github.com/sylhare/Reveal-Jekyll/blob/raw/index.html) use the `layout: raw` and then you can create your slides directly in the file using markdown:
 
  - `___`: Makes a basement slide
  - `---`: Makes the next slide
