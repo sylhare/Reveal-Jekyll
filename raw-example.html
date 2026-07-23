@@ -1,0 +1,45 @@
+---
+layout: raw
+title: Raw Markdown Example
+---
+
+# Raw Markdown
+
+Write your whole deck as **Markdown** in a single file.
+
+- `---` starts the next slide
+- `___` starts a basement (vertical) slide
+
+___
+
+## Basement slide
+
+This one lives *below* the first slide. Press the down arrow.
+
+---
+
+## Code is highlighted
+
+```js
+const reveal = new Reveal();
+reveal.initialize({ hash: true });
+```
+
+Note:
+These speaker notes only show up in the speaker view.
+
+---
+
+## Fragments
+
+- Appears first
+- Then this <!-- .element: class="fragment" -->
+- And finally this <!-- .element: class="fragment" -->
+
+---
+
+## Math
+
+Rendered with MathJax:
+
+$$ E = mc^2 $$
