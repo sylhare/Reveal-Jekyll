@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 {% include head.html %}
 <body>
 <div class="reveal">
     <div class="slides">
 
         {% for slide in site.slides %}
-        <section {% if slide.transition %} data-transition="{{ slide.transition }}" {% endif %}
-                 {% if slide.background %} data-background="{{ slide.background }}" {% endif %}
-                 {% if slide.video %} data-background-video="{{ slide.video }}" data-background-color="#000000" {% endif %}>
-            <section>
+        {% comment %} Each top-level slide can carry reveal.js data-* attributes via its front matter. {% endcomment %}
+        <section {% if slide.id %}id="{{ slide.id }}"{% endif %}
+                 {% if slide.transition %}data-transition="{{ slide.transition }}"{% endif %}
+                 {% if slide.transition_speed %}data-transition-speed="{{ slide.transition_speed }}"{% endif %}
+                 {% if slide.autoslide %}data-autoslide="{{ slide.autoslide }}"{% endif %}
+                 {% if slide.background %}data-background="{{ slide.background }}"{% endif %}
+                 {% if slide.background_image %}data-background-image="{{ slide.background_image }}"{% endif %}
+                 {% if slide.background_color %}data-background-color="{{ slide.background_color }}"{% endif %}
+                 {% if slide.background_gradient %}data-background-gradient="{{ slide.background_gradient }}"{% endif %}
+                 {% if slide.background_iframe %}data-background-iframe="{{ slide.background_iframe }}"{% endif %}
+                 {% if slide.background_size %}data-background-size="{{ slide.background_size }}"{% endif %}
+                 {% if slide.background_position %}data-background-position="{{ slide.background_position }}"{% endif %}
+                 {% if slide.background_repeat %}data-background-repeat="{{ slide.background_repeat }}"{% endif %}
+                 {% if slide.background_opacity %}data-background-opacity="{{ slide.background_opacity }}"{% endif %}
+                 {% if slide.video %}data-background-video="{{ slide.video }}" data-background-color="#000000"{% endif %}
+                 {% if slide.video_loop %}data-background-video-loop{% endif %}
+                 {% if slide.auto_animate %}data-auto-animate{% endif %}>
+            <section {% if slide.auto_animate %}data-auto-animate{% endif %}>
                 {{ slide.content }}
             </section>
 
@@ -19,8 +33,7 @@
 
     </div>
 </div>
+{% comment %} Code is highlighted server-side by Jekyll/Rouge in this layout. {% endcomment %}
 {% include reveal.html %}
 </body>
 </html>
-
-
