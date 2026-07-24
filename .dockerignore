@@ -1,0 +1,11 @@
+.git
+_site
+.jekyll-cache
+.jekyll-metadata
+node_modules
+test-results
+playwright-report
+*.gem
+Gemfile.lock
+.idea
+.DS_Store
