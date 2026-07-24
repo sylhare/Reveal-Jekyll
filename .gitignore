@@ -29,7 +29,12 @@ jekyll-theme-type-on-strap.gemspec
 *-test.md
 *copy.md
 .jekyll-cache/*
-test/*
 docker-gem/*
 reveal-jekyll-*/*
 *.pptx
+
+# Playwright e2e artifacts
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
