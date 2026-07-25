@@ -1,0 +1,23 @@
+{
+  "name": "reveal-jekyll",
+  "version": "0.1.0",
+  "description": "Reveal.js web presentations served with Jekyll",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sylhare/Reveal-Jekyll.git"
+  },
+  "private": true,
+  "scripts": {
+    "sync:reveal": "rm -rf assets/dist && cp -R node_modules/reveal.js/dist assets/dist && rm -f assets/dist/reveal.d.ts assets/dist/config.d.ts assets/dist/plugin/*.d.ts && rm -rf assets/dist/utils",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "serve": "bundle exec jekyll serve"
+  },
+  "dependencies": {
+    "reveal.js": "6.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}

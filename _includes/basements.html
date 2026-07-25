@@ -1,6 +1,12 @@
 {% for basement in site.basements %}
     {% if include.name contains basement.slide %}
-    <section>
+    <section {% if basement.transition %}data-transition="{{ basement.transition }}"{% endif %}
+             {% if basement.background %}data-background="{{ basement.background }}"{% endif %}
+             {% if basement.background_image %}data-background-image="{{ basement.background_image }}"{% endif %}
+             {% if basement.background_color %}data-background-color="{{ basement.background_color }}"{% endif %}
+             {% if basement.background_gradient %}data-background-gradient="{{ basement.background_gradient }}"{% endif %}
+             {% if basement.video %}data-background-video="{{ basement.video }}" data-background-color="#000000"{% endif %}
+             {% if basement.auto_animate %}data-auto-animate{% endif %}>
         {{ basement.content }}
     </section>
     {% endif %}

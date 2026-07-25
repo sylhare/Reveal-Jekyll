@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 {% include head.html %}
 <body>
 <div class="reveal">
     <div class="slides">
 
+        {% comment %}
+        Markdown-first slides written straight in the page.
+          "---" starts the next (horizontal) slide
+          "___" starts a basement (vertical) slide
+          "Note:" starts the speaker notes for a slide
+        Fenced code blocks, fragments (<!-- .element: class="fragment" -->) and
+        per-slide attributes (<!-- .slide: data-background="#123" -->) all work.
+        {% endcomment %}
         <section data-markdown
-                 data-separator="^---"
-                 data-separator-vertical="^___"
-                 data-charset="utf-8"
-                 data-notes="^Note:">
+                 data-separator="{{ site.reveal.separator | default: '^---' }}"
+                 data-separator-vertical="{{ site.reveal.separator_vertical | default: '^___' }}"
+                 data-separator-notes="{{ site.reveal.separator_notes | default: '^Note:' }}"
+                 data-charset="utf-8">
             <script type="text/template">{{ content }}</script>
         </section>
 

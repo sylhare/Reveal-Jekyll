@@ -1,30 +1,23 @@
-FROM sylhare/jekyll:latest
+# Reveal-Jekyll presentation server
+# Build:  docker build -t reveal-jekyll .
+# Run:    docker run --rm -p 4000:4000 reveal-jekyll
+FROM ruby:3.3-slim
+
+# Build tools needed to compile native gem extensions (ffi, sass-embedded, ...)
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential git \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY . /app
 
-# To run using the theme as the gem, creating default files automatically
-# ---
-# Configurations are in _config.yml
-RUN echo "Make sure you have a _config.yml" && cat _config.yml
-RUN echo "theme: reveal-jekyll" >> /app/_config.yml
-
-# Create index.html
-RUN echo "---" >> /app/index.html
-RUN echo "layout: presentation" >> /app/index.html
-RUN echo "---" >> /app/index.html
-RUN echo "Creating a basic index.html" && cat /app/index.html
-
-# Create Gemfile
-RUN echo "Adding the Gemfile"
-RUN echo "source \"https://rubygems.org\"" >> /app/Gemfile
-RUN echo "gem 'reveal-jekyll', '~> 0.0.4'" >> /app/Gemfile
-# ---
-
-# Install dependencies
+# Install dependencies first so they are cached across content changes
+COPY Gemfile reveal-jekyll.gemspec ./
 RUN bundle install
+
+# Copy the presentation itself
+COPY . /app
 
 EXPOSE 4000
 
-# docker run -p 4000:4000 <image_name>
+# Serve the presentation on all interfaces so it is reachable from the host
 CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]

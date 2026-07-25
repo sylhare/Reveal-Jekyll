@@ -1,8 +1,8 @@
 <head>
     <meta charset="utf-8">
-    <title>{{ site.reveal.title }}</title>
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <title>{{ site.reveal.title | default: site.title | default: "Reveal Jekyll" }}</title>
+    <meta name="description" content="{{ site.reveal.description | default: 'A framework for easily creating beautiful presentations using HTML' }}">
+    <meta name="author" content="{{ site.reveal.author | default: site.author | default: 'Hakim El Hattab' }}">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,13 +18,13 @@
     <!-- RSS -->
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'feed.xml' | absolute_url }}"/>
 
-    <!-- Theme used for reveal.js and default syntax highlighting of code -->
-    <link rel="stylesheet" href="{{ 'assets/plugin/highlight/monokai.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ 'assets/css/rouge-highlight/monokai.css' | relative_url }}">
-
     <!-- Reveal CSS -->
     <link rel="stylesheet" href="{{ 'assets/dist/reset.css' | relative_url }}">
     <link rel="stylesheet" href="{{ 'assets/dist/reveal.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ 'assets/dist/theme/' | relative_url }}{{ site.reveal.theme }}.css" id="theme">
+    <link rel="stylesheet" href="{{ 'assets/dist/theme/' | relative_url }}{{ site.reveal.theme | default: 'black' }}.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code blocks -->
+    <link rel="stylesheet" href="{{ 'assets/dist/plugin/highlight/' | relative_url }}{{ site.reveal.highlightTheme | default: 'monokai' }}.css">
+    <link rel="stylesheet" href="{{ 'assets/css/rouge-highlight/monokai.css' | relative_url }}">
 
 </head>

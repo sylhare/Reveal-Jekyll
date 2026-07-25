@@ -1,0 +1,35 @@
+name: Release gem
+
+on:
+  push:
+    tags:
+      - 'v*'
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: Publish to RubyGems
+    runs-on: ubuntu-latest
+    environment: rubygems
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build the site (sanity check)
+        run: bundle exec jekyll build --trace
+
+      - name: Build the gem
+        run: gem build reveal-jekyll.gemspec
+
+      - name: Publish to RubyGems
+        env:
+          GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+        run: gem push reveal-jekyll-*.gem
